@@ -7,6 +7,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements OnDSListener{
     private DroidSpeech droidSpeech;
     private TextView finalSpeechResult;
     private String language = "pt-BR";
+    private Button buttonChangeIP;
+    private Button buttonLanguages;
 
     private boolean can;
 
@@ -46,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements OnDSListener{
 
         // Setting the layout;
         setContentView(R.layout.activity_main);
+
         //config();
     }
 
@@ -119,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements OnDSListener{
         try{
             can = false;
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("http://192.168.43.86:3000")
+                    .baseUrl("http://192.168.1.9:3000")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
             ConversationServices conversationServices = retrofit.create(ConversationServices.class);
