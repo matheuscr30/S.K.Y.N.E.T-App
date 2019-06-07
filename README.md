@@ -1,6 +1,6 @@
 # S.K.Y.N.E.T-App (In progress)
 
-S.K.Y.N.E.T-App is an app for controll the whole system of a smart house
+S.K.Y.N.E.T-App is an app for control the whole system of a smart house
 
 ## Authors
 
